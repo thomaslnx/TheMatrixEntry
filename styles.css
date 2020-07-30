@@ -10,8 +10,8 @@
 	}
 
 	#canvas {
-		display: flex;
+    display: flex;
+    flex: 1;
     height: 100vh;
-    margin-top: -93px;
 	}
 

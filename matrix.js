@@ -129,7 +129,7 @@ const drawMatrix = () => {
     // }
     
     // let randomText = (~~(Math.random() * 2)) ? text : sym;
-    if(yAxis >= 33 && yAxis <= 3000) {
+    if(yAxis && yAxis <= 3000) {
       randomText = (~~(Math.random() * 2)) ? text = String.fromCharCode(48 + m() * 33) : sym = String.fromCharCode(3e4 + m() * 33);
     }
 

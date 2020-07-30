@@ -119,15 +119,28 @@ const drawMatrix = () => {
     let xAxis = index * 10;
     let yAxis = matrixCode[index];
     let text = '';
-    console.log('Valor de yAxis:', yAxis);
-
-    if (yAxis >= 33 && yAxis <= 231) {
-      text = String.fromCharCode(48 + m() * 33);
-    } else if (yAxis >= 232 && yAxis <= 3300) {
-      text = String.fromCharCode(3e4 + m() * 33);
+    let sym = '';
+    let randomText;
+    
+    // if (yAxis >= 33 && yAxis <= 231) {
+    //   text = String.fromCharCode(48 + m() * 33);
+    // } else if (yAxis >= 232 && yAxis <= 3300) {
+    //   sym = String.fromCharCode(3e4 + m() * 33);
+    // }
+    
+    // let randomText = (~~(Math.random() * 2)) ? text : sym;
+    if(yAxis >= 33 && yAxis <= 3000) {
+      randomText = (~~(Math.random() * 2)) ? text = String.fromCharCode(48 + m() * 33) : sym = String.fromCharCode(3e4 + m() * 33);
     }
+
+    if (randomText == '') {
+      ctx.fillText(text, xAxis, yAxis);
+    } else {
+      ctx.fillText(randomText, xAxis, yAxis); 
+    }
+    // console.log('Valor de randomText: ', randomText);
   
-    ctx.fillText(text, xAxis, yAxis); // Renderizar para pegar um numero aleatorio para exibir ou letra/numero/pontuação ou caracter chines.
+// Renderizar para pegar um numero aleatorio para exibir ou letra/numero/pontuação ou caracter chines.
 
     matrixCode[index] = yAxis > 758 + m() * 1e4 ? 0 : yAxis + 10;
   })

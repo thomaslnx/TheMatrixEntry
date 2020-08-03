@@ -1,3 +1,20 @@
+/**
+ * Author: Marcos Moura
+ * Author Description: Jr JavaScript, ReactJS and NodeJS Software Engineer
+ * Project Description: This is a Matrix Code Rain reproduction where I'm using just pure JavaScript, HTML5, 
+ *                      and CSS3. It's been a while that I was intended to code such a project. Done, project
+ *                      getting come out from blank paper and get a life. I hope you enjoy it, and if you do,
+ *                      consider leaving a star in this project. Despite to looks like a simple project
+ *                      taught me some javascript concepts more deeply.
+ * Social Networks:
+ *                  Linkedin: https://www.linkedin.com/in/marcos-de-moura-silva-06440a186/
+ *                  github: https://github.com/thomaslnx
+ *                  twitter: https://twitter.com/thomaslnx
+ * */
+
+/**
+ * Matrix Code Rain Logic
+ * */
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let m = Math.random;
@@ -49,4 +66,22 @@ const drawMatrix = () => {
   })
 }
 
-setInterval(drawMatrix, 60);
+/**
+ * Matrix Code Rain Logic
+ */
+
+// Code Rains Shows Up Logic
+
+const rainCode = document.getElementById('canvas');
+const video = document.querySelector('video');
+
+function showsRainCode () {
+  rainCode.style.display = 'flex';
+  rainCode.style.zIndex = 3;
+}
+
+video.addEventListener('ended', (event) => {
+  console.log('O video terminou!');
+  showsRainCode();
+  setInterval(drawMatrix, 60);
+});

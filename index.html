@@ -12,8 +12,28 @@
   </head>
 
 	<body>
-		<canvas id="canvas">
-		</canvas>
+    <audio autoplay>
+      <source src="/Users/marcos/Desktop/matrixeffect/assets/audio/MatrixIntroAudio.mp4" type="audio/mp4" >
+    </audio>
+
+    <video class="intro-video" muted autoplay>
+      <source src="/Users/marcos/Desktop/matrixeffect/assets/video/TheMatrixIntro3.mp4" type="video/mp4">
+      <!-- <source src="/Users/marcos/Desktop/matrixeffect/assets/video/MatrixIntro.webm" type="video/webm"> -->
+
+        Your browser do not support video streaming
+    </video>
+
+		<canvas class="code-rain" id="canvas">
+      <div class="upperBar"> </div>
+      <div class="lowerBar"> </div>
+    </canvas>
+
+    <div class="screenMask">
+
+      <p>Conteudo da screeMask</p>
+      <div class="lowerBar"> </div>
+    </div>
+    
 		<script src="matrix.js"></script>
 	</body>
 </html>

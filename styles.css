@@ -20,26 +20,7 @@ body {
   position: absolute;
   display: none;
   width: 100%;
-  height: 80vh;
-  margin: auto auto;
-  top: 100px;
+  height: 90vh;
+  top: 50px;
   left: 0;
 }
-
-.upperBar {
-  width: 100%;
-  height: 40px;
-  background-color: green;
-}
-
-.screenMask {
-  position: absolute;
-  z-index: 4;
-  display: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 722px;
-}
-
-

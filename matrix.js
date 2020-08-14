@@ -63,6 +63,7 @@ const drawMatrix = () => {
     }
 
     matrixCode[index] = yAxis > 758 + m() * 1e4 ? 0 : yAxis + 10;
+    console.log(`Valor de matrixCode[${index}]: `, `${matrixCode[index]}`);
   })
 }
 
@@ -78,10 +79,12 @@ const video = document.querySelector('video');
 function showsRainCode () {
   rainCode.style.display = 'flex';
   rainCode.style.zIndex = 3;
+  rainCode.style.flexDirection = 'column';
+  rainCode.style.justifyContent = 'space-between';
 }
 
 video.addEventListener('ended', (event) => {
-  console.log('O video terminou!');
+  // console.log('O video terminou!');
   showsRainCode();
   setInterval(drawMatrix, 60);
 });
